@@ -10,10 +10,18 @@
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
   </url><url>
+    <loc>http://localhost:1313/predmety/pos/cviceni/</loc>
+  </url><url>
+    <loc>http://localhost:1313/predmety/pos/cviceni/nat/</loc>
+  </url><url>
     <loc>http://localhost:1313/predmety/pos/</loc>
   </url><url>
     <loc>http://localhost:1313/predmety/</loc>
   </url><url>
+    <loc>http://localhost:1313/predmety/pos/cviceni/routery/</loc>
+  </url><url>
     <loc>http://localhost:1313/tags/</loc>
+  </url><url>
+    <loc>http://localhost:1313/predmety/pos/cviceni/vlan/</loc>
   </url>
 </urlset>

@@ -10,30 +10,35 @@
 <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
 <link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
-<title>NAT – janekspalek 🤝</title>
-  <meta name="description" content="K čemu slouží NAT Toto nastavení na routeru umožňuje zařízením v lokální síti (LAN) komunikovat s externími sítěmi, jako je internet, pomocí jedné nebo několika veřejných IP adres NAT překládá privátní IP adresy vnitřní sítě na veřejné IP adresy Zvyšuje bezpečnost a šetří veřejný adresní prostor Konfigurace dynamického NAT 1. (optional) Nastavení IP adresy PC &#43; gateway Nastavení IP adresy PC" /><link rel="canonical" href="http://localhost:1313/predmety/pos/cviceni/nat/" itemprop="url" />
+<title>VLAN – janekspalek 🤝</title>
+  <meta name="description" content="K čemu slouží VLAN Dovoluje nám rozdělit jeden fyzický switch na více menších switchů Každý VLAN je číslo přiřazené ke každému portu na switchi Všechny porty, které nemají přiřazené VLAN číslo jsou v defaultním VLANu (číslo 1) Trunk a Access porty Access port = může být pouze v jedné VLAN, je do něj většinou připojený PC Trunk port = řídí provoz mezi více VLAN Konfigurace 1. Vytvoření VLAN na každém switchi Vytvoření VLAN s číslem a jeho pojmenování (nepovinné)" /><link rel="canonical" href="http://localhost:1313/predmety/pos/cviceni/vlan/" itemprop="url" />
 
-<meta property="og:title" content="NAT" />
-<meta property="og:description" content="K čemu slouží NAT
+<meta property="og:title" content="VLAN" />
+<meta property="og:description" content="K čemu slouží VLAN
     
-Toto nastavení na routeru umožňuje zařízením v lokální síti (LAN) komunikovat s externími sítěmi, jako je internet, pomocí jedné nebo několika veřejných IP adres
-NAT překládá privátní IP adresy vnitřní sítě na veřejné IP adresy
-Zvyšuje bezpečnost a šetří veřejný adresní prostor
+Dovoluje nám rozdělit jeden fyzický switch na více menších switchů
+Každý VLAN je číslo přiřazené ke každému portu na switchi
+Všechny porty, které nemají přiřazené VLAN číslo jsou v defaultním VLANu (číslo 1)
 
-Konfigurace dynamického NAT
-    1. (optional) Nastavení IP adresy PC &#43; gateway
-    Nastavení IP adresy PC" />
+Trunk a Access porty
+    
+Access port = může být pouze v jedné VLAN, je do něj většinou připojený PC
+Trunk port = řídí provoz mezi více VLAN
+
+Konfigurace
+    1. Vytvoření VLAN na každém switchi
+    Vytvoření VLAN s číslem a jeho pojmenování (nepovinné)" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://localhost:1313/predmety/pos/cviceni/nat/" /><meta property="article:section" content="predmety" />
+<meta property="og:url" content="http://localhost:1313/predmety/pos/cviceni/vlan/" /><meta property="article:section" content="predmety" />
 
 
 
-  <meta itemprop="name" content="NAT">
-  <meta itemprop="description" content="K čemu slouží NAT Toto nastavení na routeru umožňuje zařízením v lokální síti (LAN) komunikovat s externími sítěmi, jako je internet, pomocí jedné nebo několika veřejných IP adres NAT překládá privátní IP adresy vnitřní sítě na veřejné IP adresy Zvyšuje bezpečnost a šetří veřejný adresní prostor Konfigurace dynamického NAT 1. (optional) Nastavení IP adresy PC &#43; gateway Nastavení IP adresy PC">
-  <meta itemprop="wordCount" content="239">
+  <meta itemprop="name" content="VLAN">
+  <meta itemprop="description" content="K čemu slouží VLAN Dovoluje nám rozdělit jeden fyzický switch na více menších switchů Každý VLAN je číslo přiřazené ke každému portu na switchi Všechny porty, které nemají přiřazené VLAN číslo jsou v defaultním VLANu (číslo 1) Trunk a Access porty Access port = může být pouze v jedné VLAN, je do něj většinou připojený PC Trunk port = řídí provoz mezi více VLAN Konfigurace 1. Vytvoření VLAN na každém switchi Vytvoření VLAN s číslem a jeho pojmenování (nepovinné)">
+  <meta itemprop="wordCount" content="314">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="NAT">
-  <meta name="twitter:description" content="K čemu slouží NAT Toto nastavení na routeru umožňuje zařízením v lokální síti (LAN) komunikovat s externími sítěmi, jako je internet, pomocí jedné nebo několika veřejných IP adres NAT překládá privátní IP adresy vnitřní sítě na veřejné IP adresy Zvyšuje bezpečnost a šetří veřejný adresní prostor Konfigurace dynamického NAT 1. (optional) Nastavení IP adresy PC &#43; gateway Nastavení IP adresy PC">
+  <meta name="twitter:title" content="VLAN">
+  <meta name="twitter:description" content="K čemu slouží VLAN Dovoluje nám rozdělit jeden fyzický switch na více menších switchů Každý VLAN je číslo přiřazené ke každému portu na switchi Všechny porty, které nemají přiřazené VLAN číslo jsou v defaultním VLANu (číslo 1) Trunk a Access porty Access port = může být pouze v jedné VLAN, je do něj většinou připojený PC Trunk port = řídí provoz mezi více VLAN Konfigurace 1. Vytvoření VLAN na každém switchi Vytvoření VLAN s číslem a jeho pojmenování (nepovinné)">
 
     <link href="/css/compiled/main.css" rel="stylesheet" />
 
@@ -182,25 +187,53 @@ Konfigurace dynamického NAT
   >1. Praktický test
     </a>
               
-            </li><li class="hx-flex hx-flex-col open"><a
+            </li><li class="hx-flex hx-flex-col "><a
     class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      sidebar-active-item hx-bg-primary-100 hx-font-semibold hx-text-primary-800 contrast-more:hx-border contrast-more:hx-border-primary-500 dark:hx-bg-primary-400/10 dark:hx-text-primary-600 contrast-more:dark:hx-border-primary-500"
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
     href="/predmety/pos/cviceni/nat/"
     
   >NAT
     </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/predmety/pos/cviceni/routery/"
+    
+  >Router
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col open"><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      sidebar-active-item hx-bg-primary-100 hx-font-semibold hx-text-primary-800 contrast-more:hx-border contrast-more:hx-border-primary-500 dark:hx-bg-primary-400/10 dark:hx-text-primary-600 contrast-more:dark:hx-border-primary-500"
+    href="/predmety/pos/cviceni/vlan/"
+    
+  >VLAN
+    </a>
   
     <ul class='hx-flex hx-flex-col hx-gap-1 hx-relative before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] dark:before:hx-bg-neutral-800 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-pr-3 rtl:before:hx-right-0 ltr:hx-ml-3 rtl:hx-mr-3'><li>
               <a
-                href="#k-%c4%8demu-slou%c5%be%c3%ad-nat"
+                href="#k-%c4%8demu-slou%c5%be%c3%ad-vlan"
                 class="hx-flex hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [word-break:break-word] hx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:hx-border hx-gap-2 before:hx-opacity-25 before:hx-content-['#'] hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:hx-text-gray-900 contrast-more:dark:hx-text-gray-50 contrast-more:hx-border-transparent contrast-more:hover:hx-border-gray-900 contrast-more:dark:hover:hx-border-gray-50"
-              >K čemu slouží NAT</a>
+              >K čemu slouží VLAN</a>
             </li>
           <li>
               <a
-                href="#konfigurace-dynamick%c3%a9ho-nat"
+                href="#trunk-a-access-porty"
                 class="hx-flex hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [word-break:break-word] hx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:hx-border hx-gap-2 before:hx-opacity-25 before:hx-content-['#'] hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:hx-text-gray-900 contrast-more:dark:hx-text-gray-50 contrast-more:hx-border-transparent contrast-more:hover:hx-border-gray-900 contrast-more:dark:hover:hx-border-gray-50"
-              >Konfigurace dynamického NAT</a>
+              >Trunk a Access porty</a>
+            </li>
+          <li>
+              <a
+                href="#konfigurace"
+                class="hx-flex hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [word-break:break-word] hx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:hx-border hx-gap-2 before:hx-opacity-25 before:hx-content-['#'] hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:hx-text-gray-900 contrast-more:dark:hx-text-gray-50 contrast-more:hx-border-transparent contrast-more:hover:hx-border-gray-900 contrast-more:dark:hover:hx-border-gray-50"
+              >Konfigurace</a>
+            </li>
+          <li>
+              <a
+                href="#dal%c5%a1%c3%ad-p%c5%99%c3%adkazy"
+                class="hx-flex hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [word-break:break-word] hx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:hx-border hx-gap-2 before:hx-opacity-25 before:hx-content-['#'] hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:hx-text-gray-900 contrast-more:dark:hx-text-gray-50 contrast-more:hx-border-transparent contrast-more:hover:hx-border-gray-900 contrast-more:dark:hover:hx-border-gray-50"
+              >Další příkazy</a>
             </li>
           </ul>
   
@@ -240,12 +273,28 @@ Konfigurace dynamického NAT
   >1. Praktický test
     </a>
               
-            </li><li class="hx-flex hx-flex-col open"><a
+            </li><li class="hx-flex hx-flex-col "><a
     class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      sidebar-active-item hx-bg-primary-100 hx-font-semibold hx-text-primary-800 contrast-more:hx-border contrast-more:hx-border-primary-500 dark:hx-bg-primary-400/10 dark:hx-text-primary-600 contrast-more:dark:hx-border-primary-500"
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
     href="/predmety/pos/cviceni/nat/"
     
   >NAT
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/predmety/pos/cviceni/routery/"
+    
+  >Router
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col open"><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      sidebar-active-item hx-bg-primary-100 hx-font-semibold hx-text-primary-800 contrast-more:hx-border contrast-more:hx-border-primary-500 dark:hx-bg-primary-400/10 dark:hx-text-primary-600 contrast-more:dark:hx-border-primary-500"
+    href="/predmety/pos/cviceni/vlan/"
+    
+  >VLAN
     </a>
               
             </li></ul>
@@ -271,35 +320,47 @@ Konfigurace dynamického NAT
 <nav class="hextra-toc hx-order-last hx-hidden hx-w-64 hx-shrink-0 xl:hx-block print:hx-hidden hx-px-4" aria-label="table of contents">
     <div class="hextra-scrollbar hx-sticky hx-top-16 hx-overflow-y-auto hx-pr-4 hx-pt-6 hx-text-sm [hyphens:auto] hx-max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] ltr:hx--mr-4 rtl:hx--ml-4"><p class="hx-mb-4 hx-font-semibold hx-tracking-tight">On this page</p><ul>
       <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
-        <a class="hx-font-semibold hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#k-%c4%8demu-slou%c5%be%c3%ad-nat">K čemu slouží NAT
+        <a class="hx-font-semibold hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#k-%c4%8demu-slou%c5%be%c3%ad-vlan">K čemu slouží VLAN
         </a>
       </li>
       <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
-        <a class="hx-font-semibold hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#konfigurace-dynamick%c3%a9ho-nat">Konfigurace dynamického NAT
+        <a class="hx-font-semibold hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#trunk-a-access-porty">Trunk a Access porty
         </a>
       </li>
       <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
-        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#1-optional-nastaven%c3%ad-ip-adresy-pc--gateway">1. (optional) Nastavení IP adresy PC &#43; gateway
+        <a class="hx-font-semibold hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#konfigurace">Konfigurace
         </a>
       </li>
       <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
-        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#2-identifikace-rozhran%c3%ad">2. Identifikace rozhraní
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#1-vytvo%c5%99en%c3%ad-vlan-na-ka%c5%bed%c3%a9m-switchi">1. Vytvoření VLAN na každém switchi
         </a>
       </li>
       <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
-        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#3-definice-rezervo%c3%a1ru-adres">3. Definice rezervoáru adres
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#2-konfigurace-access-port%c5%af">2. Konfigurace access portů
         </a>
       </li>
       <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
-        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#4-vybr%c3%a1n%c3%ad-p%c5%99ekl%c3%a1dan%c3%bdch-adres">4. Vybrání překládaných adres
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#3-konfigurace-trunk-port%c5%af">3. Konfigurace trunk portů
         </a>
       </li>
       <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
-        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#5-samotn%c3%bd-p%c5%99eklad-na-adresy-z-poolu">5. Samotný překlad na adresy z poolu
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#4-povolen%c3%ad-ur%c4%8dit%c3%bdch-vlan-na-trunk-portech">4. Povolení určitých VLAN na trunk portech
         </a>
       </li>
       <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
-        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#zobrazen%c3%ad-p%c5%99ekladov%c3%a9-tabulky">Zobrazení překladové tabulky
+        <a class="hx-font-semibold hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#dal%c5%a1%c3%ad-p%c5%99%c3%adkazy">Další příkazy
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#seznam-access-port%c5%af-a-vlan%c5%af">Seznam access portů a VLANů
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#seznam-trunk-port%c5%af">Seznam trunk portů
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#seznam-port%c5%af-a-jejich-statusu">Seznam portů a jejich statusu
         </a>
       </li></ul>
       <div class="hx-mt-8 hx-border-t hx-bg-white hx-pt-8 hx-shadow-[0_-12px_16px_white] dark:hx-bg-dark dark:hx-shadow-[0_-12px_16px_#111] hx-sticky hx-bottom-0 hx-flex hx-flex-col hx-items-start hx-gap-2 hx-pb-8 dark:hx-border-neutral-800 contrast-more:hx-border-t contrast-more:hx-border-neutral-400 contrast-more:hx-shadow-none contrast-more:dark:hx-border-neutral-400">
@@ -326,68 +387,30 @@ Konfigurace dynamického NAT
         </div><svg class="hx-w-3.5 hx-shrink-0 rtl:-hx-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
         <div class="hx-whitespace-nowrap hx-transition-colors hx-min-w-[24px] hx-overflow-hidden hx-text-ellipsis hover:hx-text-gray-900 dark:hover:hx-text-gray-100">
           <a href="/predmety/pos/cviceni/">Cvičení</a>
-        </div><svg class="hx-w-3.5 hx-shrink-0 rtl:-hx-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg><div class="hx-whitespace-nowrap hx-transition-colors hx-font-medium hx-text-gray-700 contrast-more:hx-font-bold contrast-more:hx-text-current dark:hx-text-gray-100 contrast-more:dark:hx-text-current">NAT</div>
+        </div><svg class="hx-w-3.5 hx-shrink-0 rtl:-hx-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg><div class="hx-whitespace-nowrap hx-transition-colors hx-font-medium hx-text-gray-700 contrast-more:hx-font-bold contrast-more:hx-text-current dark:hx-text-gray-100 contrast-more:dark:hx-text-current">VLAN</div>
   </div>
 
         <div class="content">
-          <h1>NAT</h1>
-          <h2>K čemu slouží NAT<span class="hx-absolute -hx-mt-20" id="k-čemu-slouží-nat"></span>
-    <a href="#k-%c4%8demu-slou%c5%be%c3%ad-nat" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><ul>
-<li>Toto nastavení na routeru umožňuje zařízením v <strong>lokální síti</strong> (<code>LAN</code>) komunikovat s <strong>externími sítěmi</strong>, jako je internet, pomocí <strong>jedné nebo několika veřejných IP adres</strong></li>
-<li><code>NAT</code> překládá <code>privátní</code> IP adresy vnitřní sítě na <code>veřejné</code> IP adresy</li>
-<li>Zvyšuje bezpečnost a šetří veřejný adresní prostor</li>
+          <h1>VLAN</h1>
+          <h2>K čemu slouží VLAN<span class="hx-absolute -hx-mt-20" id="k-čemu-slouží-vlan"></span>
+    <a href="#k-%c4%8demu-slou%c5%be%c3%ad-vlan" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><ul>
+<li>Dovoluje nám rozdělit <strong>jeden fyzický switch</strong> na <strong>více menších switchů</strong></li>
+<li>Každý VLAN je <strong>číslo</strong> přiřazené ke každému <strong>portu</strong> na switchi</li>
+<li>Všechny porty, které nemají přiřazené VLAN číslo jsou v <strong>defaultním VLANu (číslo 1)</strong></li>
 </ul>
-<h2>Konfigurace dynamického NAT<span class="hx-absolute -hx-mt-20" id="konfigurace-dynamického-nat"></span>
-    <a href="#konfigurace-dynamick%c3%a9ho-nat" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>1. (optional) Nastavení IP adresy PC + gateway<span class="hx-absolute -hx-mt-20" id="1-optional-nastavení-ip-adresy-pc--gateway"></span>
-    <a href="#1-optional-nastaven%c3%ad-ip-adresy-pc--gateway" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><strong>Nastavení IP adresy PC</strong></p>
-<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
-  
-
-<pre><code>ip address add &lt;adresa&gt;/&lt;maska&gt; dev eth&lt;cislo&gt;
-
-ip address add 10.0.0.2/24 dev eth1</code></pre><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
-  <button
-    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
-    title="Copy code"
-  >
-    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
-    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
-  </button>
-</div>
-
-  
-</div>
-<p><strong>Nastavení gateway</strong> (gateway = port na routeru)</p>
-<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
-  
-
-<pre><code>ip route add default via &lt;brana&gt;
-
-ip address add default via 10.0.0.1</code></pre><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
-  <button
-    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
-    title="Copy code"
-  >
-    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
-    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
-  </button>
-</div>
-
-  
-</div>
-<h3>2. Identifikace rozhraní<span class="hx-absolute -hx-mt-20" id="2-identifikace-rozhraní"></span>
-    <a href="#2-identifikace-rozhran%c3%ad" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><ul>
-<li><strong>Vnitřní rozhraní</strong> (<code>inside</code>) - rozhraní připojené k lokální síti</li>
-<li><strong>Vnější rozhraní</strong> (<code>outside</code>) - rozhraní připojené k externí síti, například k internetu</li>
+<h2>Trunk a Access porty<span class="hx-absolute -hx-mt-20" id="trunk-a-access-porty"></span>
+    <a href="#trunk-a-access-porty" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><ul>
+<li><strong>Access port</strong> = může být pouze v jedné VLAN, je do něj většinou připojený PC</li>
+<li><strong>Trunk port</strong> = řídí provoz mezi více VLAN</li>
 </ul>
+<h2>Konfigurace<span class="hx-absolute -hx-mt-20" id="konfigurace"></span>
+    <a href="#konfigurace" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>1. Vytvoření VLAN na každém switchi<span class="hx-absolute -hx-mt-20" id="1-vytvoření-vlan-na-každém-switchi"></span>
+    <a href="#1-vytvo%c5%99en%c3%ad-vlan-na-ka%c5%bed%c3%a9m-switchi" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Vytvoření VLAN s <em>číslem</em> a jeho <em>pojmenování</em> (nepovinné)</p>
 <div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
   
 
-<pre><code>(config)# interface GigabitEthernet0/0
-(config-if)# ip nat inside
-(config-if)# exit
-(config)# interface GigabitEthernet0/1
-(config-if)# ip nat outside</code></pre><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+<pre><code>Switch(config)# vlan 10
+Switch(config-vlan)# name V10</code></pre><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
   <button
     class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
     title="Copy code"
@@ -399,16 +422,14 @@ ip address add default via 10.0.0.1</code></pre><div class="hextra-code-copy-btn
 
   
 </div>
-<h3>3. Definice rezervoáru adres<span class="hx-absolute -hx-mt-20" id="3-definice-rezervoáru-adres"></span>
-    <a href="#3-definice-rezervo%c3%a1ru-adres" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><ul>
-<li><strong>Na co překládám</strong></li>
-</ul>
+<h3>2. Konfigurace access portů<span class="hx-absolute -hx-mt-20" id="2-konfigurace-access-portů"></span>
+    <a href="#2-konfigurace-access-port%c5%af" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Každému portu zvlášť nastavíme <em>mode = access</em> a číslo VLAN</p>
 <div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
   
 
-<pre><code>(config)# ip nat pool &lt;nazev&gt; &lt;start_IP&gt; &lt;end_IP&gt; netmask &lt;maska&gt;
-
-(config)# ip nat pool MujNATPool 20.0.0.1 20.0.0.100 netmask 255.255.255.0</code></pre><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+<pre><code>Switch(config)# interface Ethernet 0/0
+Switch(config-if)# switchport mode access
+Switch(config-if)# switchport access vlan 10</code></pre><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
   <button
     class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
     title="Copy code"
@@ -420,17 +441,13 @@ ip address add default via 10.0.0.1</code></pre><div class="hextra-code-copy-btn
 
   
 </div>
-<h3>4. Vybrání překládaných adres<span class="hx-absolute -hx-mt-20" id="4-vybrání-překládaných-adres"></span>
-    <a href="#4-vybr%c3%a1n%c3%ad-p%c5%99ekl%c3%a1dan%c3%bdch-adres" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><ul>
-<li><strong>Co se má překládat</strong></li>
-<li><code>wildcard</code> = kde jsou nuly, musí být adresa stejná jako adresa sítě</li>
-</ul>
+<h3>3. Konfigurace trunk portů<span class="hx-absolute -hx-mt-20" id="3-konfigurace-trunk-portů"></span>
+    <a href="#3-konfigurace-trunk-port%c5%af" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Každému portu nastavíme <em>mode = trunk</em></p>
 <div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
   
 
-<pre><code>(config)# access-list &lt;ACL číslo 1-99&gt; permit &lt;IP&gt; &lt;wildcard&gt;
-
-(config)# access-list 1 permit 10.0.0.0 0.0.0.255</code></pre><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+<pre><code>Switch(config)# interface Ethernet1/1
+Switch(config-if)# switchport mode trunk</code></pre><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
   <button
     class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
     title="Copy code"
@@ -442,13 +459,13 @@ ip address add default via 10.0.0.1</code></pre><div class="hextra-code-copy-btn
 
   
 </div>
-<h3>5. Samotný překlad na adresy z poolu<span class="hx-absolute -hx-mt-20" id="5-samotný-překlad-na-adresy-z-poolu"></span>
-    <a href="#5-samotn%c3%bd-p%c5%99eklad-na-adresy-z-poolu" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+<h3>4. Povolení určitých VLAN na trunk portech<span class="hx-absolute -hx-mt-20" id="4-povolení-určitých-vlan-na-trunk-portech"></span>
+    <a href="#4-povolen%c3%ad-ur%c4%8dit%c3%bdch-vlan-na-trunk-portech" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Defaultně mají trunk porty povoleny všechny VLAN z databáze</p>
+<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
   
 
-<pre><code>(config)# ip nat inside source list &lt;ACL číslo&gt; pool &lt;NAZEV&gt; overload
-
-(config)# ip nat inside source list 1 pool MujNATPool overload</code></pre><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+<pre><code>Switch(config)# interface Ethernet 2/1
+Switch(config-if)# switchport trunk allowed vlan 10,20</code></pre><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
   <button
     class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
     title="Copy code"
@@ -460,12 +477,21 @@ ip address add default via 10.0.0.1</code></pre><div class="hextra-code-copy-btn
 
   
 </div>
-<h3>Zobrazení překladové tabulky<span class="hx-absolute -hx-mt-20" id="zobrazení-překladové-tabulky"></span>
-    <a href="#zobrazen%c3%ad-p%c5%99ekladov%c3%a9-tabulky" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Zobrazení překladové tabulky</p>
-<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+<h2>Další příkazy<span class="hx-absolute -hx-mt-20" id="další-příkazy"></span>
+    <a href="#dal%c5%a1%c3%ad-p%c5%99%c3%adkazy" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>Seznam access portů a VLANů<span class="hx-absolute -hx-mt-20" id="seznam-access-portů-a-vlanů"></span>
+    <a href="#seznam-access-port%c5%af-a-vlan%c5%af" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
   
 
-<pre><code>Router# show ip nat translations</code></pre><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+<pre><code>Switch# show vlan brief
+
+VLAN Name                             Status    Ports
+---- -------------------------------- --------- -------------------------------
+1    default                          active    Et0/2, Et0/3, Et1/0, Et1/2
+                                                Et1/3, Et2/0, Et2/3, Et3/0
+                                                Et3/1, Et3/2, Et3/3
+10   RED                              active    Et0/0
+20   ORANGE                           active
+30   BLUE                             active    Et0/1</code></pre><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
   <button
     class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
     title="Copy code"
@@ -477,11 +503,54 @@ ip address add default via 10.0.0.1</code></pre><div class="hextra-code-copy-btn
 
   
 </div>
-<p>Vymazání překladové tabulky</p>
-<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+<h3>Seznam trunk portů<span class="hx-absolute -hx-mt-20" id="seznam-trunk-portů"></span>
+    <a href="#seznam-trunk-port%c5%af" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
   
 
-<pre><code>Router# clear ip nat translations *</code></pre><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+<pre><code>Switch# show interfaces trunk
+
+Port        Mode             Encapsulation  Status        Native vlan
+Et1/1       on               802.1q         trunking      2
+Et2/1       on               802.1q         trunking      3
+Et2/2       on               802.1q         trunking      3
+
+Port        Vlans allowed on trunk
+Et1/1       1-4094
+Et2/1       10,20
+Et2/2       20,30
+
+Port        Vlans allowed and active in management domain
+Et1/1       1,10,20,30
+Et2/1       10,20
+Et2/2       20,30
+
+Port        Vlans in spanning tree forwarding state and not pruned
+Et1/1       1,10,20,30
+Et2/1       10,20
+Et2/2       20,30</code></pre><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+
+  
+</div>
+<h3>Seznam portů a jejich statusu<span class="hx-absolute -hx-mt-20" id="seznam-portů-a-jejich-statusu"></span>
+    <a href="#seznam-port%c5%af-a-jejich-statusu" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+  
+
+<pre><code>Switch# show interfaces status
+
+Port      Name               Status       Vlan       Duplex  Speed Type
+Et0/0                        connected    10           auto   auto unknown
+Et0/1                        connected    30           auto   auto unknown
+Et1/1                        connected    trunk        auto   auto unknown
+Et2/1                        connected    trunk        auto   auto unknown
+Et2/2                        connected    trunk        auto   auto unknown</code></pre><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
   <button
     class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
     title="Copy code"
@@ -497,10 +566,10 @@ ip address add default via 10.0.0.1</code></pre><div class="hextra-code-copy-btn
         </div>
         <div class="hx-mt-16"></div>
         <div class="hx-mb-8 hx-flex hx-items-center hx-border-t hx-pt-8 dark:hx-border-neutral-800 contrast-more:hx-border-neutral-400 dark:contrast-more:hx-border-neutral-400 print:hx-hidden"><a
-        href="/predmety/pos/cviceni/test-1/"
-        title="1. Praktický test"
+        href="/predmety/pos/cviceni/routery/"
+        title="Router"
         class="hx-flex hx-max-w-[50%] hx-items-center hx-gap-1 hx-py-4 hx-text-base hx-font-medium hx-text-gray-600 hx-transition-colors [word-break:break-word] hover:hx-text-primary-600 dark:hx-text-gray-300 md:hx-text-lg ltr:hx-pr-4 rtl:hx-pl-4"
-      ><svg class="hx-inline hx-h-5 hx-shrink-0 ltr:hx-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>1. Praktický test</a></div>
+      ><svg class="hx-inline hx-h-5 hx-shrink-0 ltr:hx-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>Router</a></div>
         
       </main>
     </article>
