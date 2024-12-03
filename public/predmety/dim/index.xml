@@ -1,0 +1,141 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>janekspalek 🤝 – Diskrétní matematika</title>
+    <link>http://localhost:49982/predmety/dim/</link>
+    <description>Recent content in Diskrétní matematika on janekspalek 🤝</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	  <atom:link href="http://localhost:49982/predmety/dim/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Teorie grafů</title>
+      <link>http://localhost:49982/predmety/dim/grafy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:49982/predmety/dim/grafy/</guid>
+      <description>
+        
+        
+        &lt;p&gt;&lt;a href=&#34;https://homel.vsb.cz/~dor028/Teorie_grafu.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://homel.vsb.cz/~dor028/Teorie_grafu.pdf&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Definice grafu&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;definice-grafu&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#definice-grafu&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Graf G&lt;/strong&gt; je uspořádaná dvojice &lt;code&gt;G = (V, E)&lt;/code&gt;, kde V je &lt;strong&gt;neprázdná množina vrcholů&lt;/strong&gt; a E je &lt;strong&gt;množina hran&lt;/strong&gt; - množina (některých) dvouprvkových podmnožin množiny&lt;/li&gt;
+&lt;li&gt;Prvky množiny V nazýváme &lt;strong&gt;vrcholy&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Prvky množiny E nazýváme &lt;strong&gt;hrany&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Orientované grafy a multigrafy&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;orientované-grafy-a-multigrafy&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#orientovan%c3%a9-grafy-a-multigrafy&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Orientovaných grafem rozumíme uspořádanou dvojici &lt;code&gt;G = (V, E)&lt;/code&gt;, kde V je neprázdná množina vrcholů a &lt;strong&gt;množina orientovaných hran&lt;/strong&gt; je &lt;code&gt;E ⊆ V x V&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;V nakreslení znázorňujeme orientované hrany &lt;strong&gt;šipkami&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Obecnější pojem než orientovaný graf je &lt;strong&gt;multigraf&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Princip sudosti&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;princip-sudosti&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#princip-sudosti&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Součet stupňů v grafu je vždy &lt;strong&gt;sudý&lt;/strong&gt; a je roven &lt;strong&gt;dvojnásobku počtu hran&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+    &lt;img src=&#34;../image-1.png&#34; alt=&#34;alt text&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;h2&gt;Věta Havlova-Hakimiho&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;věta-havlova-hakimiho&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#v%c4%9bta-havlova-hakimiho&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;
+    &lt;img src=&#34;../image.png&#34; alt=&#34;alt text&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;h2&gt;Indukovaný podgraf&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;indukovaný-podgraf&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#indukovan%c3%bd-podgraf&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Vznikne tak, že vezmu vybrané uzly z původního grafu a zachovám jen ty &lt;strong&gt;hrany&lt;/strong&gt;, které mezi nimi už v původním grafu &lt;strong&gt;existovaly&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Žádné nové hrany neměním, jen &amp;ldquo;zdědím&amp;rdquo; vztahy mezi těmi vybranými uzly&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+    &lt;img src=&#34;../image-2.png&#34; alt=&#34;alt text&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;h2&gt;Isomorfismus grafů&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;isomorfismus-grafů&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#isomorfismus-graf%c5%af&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Grafy, které jsou navzájem &lt;strong&gt;ekvivalentní&lt;/strong&gt;, liší se pouze &lt;strong&gt;jiným označením&lt;/strong&gt; vrcholů a hran a &lt;strong&gt;jiným způsobem zakreslení&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Počty vrcholů&lt;/strong&gt; grafů musí být stejné&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Počty hran&lt;/strong&gt; grafů musí být shodné&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Počty vrcholů daných stupňů&lt;/strong&gt; musí být stejné&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+    &lt;img src=&#34;../image-3.png&#34; alt=&#34;alt text&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;
+    &lt;img src=&#34;../image-4.png&#34; alt=&#34;alt text&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;h2&gt;Sled grafu&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;sled-grafu&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#sled-grafu&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&amp;ldquo;Procházka&amp;rdquo; po uzlech, kde jdu z jednoho uzlu do druhého po hranách&lt;/li&gt;
+&lt;li&gt;Můžu chodit &lt;strong&gt;dokola&lt;/strong&gt;, &lt;strong&gt;vracet se na stejné uzly&lt;/strong&gt; a také přecházet stejné hrany vícekrát&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Vrchol V je dosažitelný z vrcholu U, jestliže v grafu existuje sled z vrcholu U do vrcholu V&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Souvislý graf musí mít pro každé 2 vrcholy U, V je vrchol V dosažitelný z vrcholu U&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+    &lt;img src=&#34;../image-5.png&#34; alt=&#34;alt text&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;
+    &lt;img src=&#34;../image-6.png&#34; alt=&#34;alt text&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;
+    &lt;img src=&#34;../image-7.png&#34; alt=&#34;alt text&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;h2&gt;Tah a cesta grafu&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;tah-a-cesta-grafu&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#tah-a-cesta-grafu&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Tah grafu je sled, ve kterém se &lt;strong&gt;neopakují žádné hrany&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Cesta je sled, ve kterém se neopakují žádné vrcholy, tedy ani hrany&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+    &lt;img src=&#34;../image-8.png&#34; alt=&#34;alt text&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;h2&gt;Komponenta grafu&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;komponenta-grafu&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#komponenta-grafu&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Samostatná část grafu, kde jsou všechny uzly propojené, ale na žádné uzly mimo tuto část se nedostanu&lt;/li&gt;
+&lt;li&gt;Je to každý maximální souvislý podgraf grafu G&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+    &lt;img src=&#34;../image-9.png&#34; alt=&#34;alt text&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;h2&gt;Vyšší stupně souvislosti&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;vyšší-stupně-souvislosti&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#vy%c5%a1%c5%a1%c3%ad-stupn%c4%9b-souvislosti&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;V praxi nás může zajímat nejen, jestli existuje spojení (cesta) mezi vrcholy, ale také, jestli bude existovat spojení v případě výpadků některých vrcholů&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+    &lt;img src=&#34;../image-10.png&#34; alt=&#34;alt text&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;
+    &lt;img src=&#34;../image-11.png&#34; alt=&#34;alt text&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;
+    &lt;img src=&#34;../image-12.png&#34; alt=&#34;alt text&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;h2&gt;Eulerovský graf&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;eulerovský-graf&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#eulerovsk%c3%bd-graf&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Pokud začínám a končím ve stejném vrcholu = &lt;strong&gt;uzavřený eurelovský tah = eulerovský graf&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Pokud ale končím jinde než jsem začal = &lt;strong&gt;otevřený eulerovský tah&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Říkáme, že takový graf lze &lt;strong&gt;nakreslit jedním tahem&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+    &lt;img src=&#34;../image-13.png&#34; alt=&#34;alt text&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;
+    &lt;img src=&#34;../image-14.png&#34; alt=&#34;alt text&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;
+    &lt;img src=&#34;../image-15.png&#34; alt=&#34;alt text&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;
+    &lt;img src=&#34;../image-16.png&#34; alt=&#34;alt text&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;h2&gt;Hamiltonovský graf&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;hamiltonovský-graf&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#hamiltonovsk%c3%bd-graf&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;
+    &lt;img src=&#34;../image-17.png&#34; alt=&#34;alt text&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;h2&gt;Vzdálenost grafu&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;vzdálenost-grafu&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#vzd%c3%a1lenost-grafu&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Pro neohodnocené grafy můžeme předpokládat, že &lt;strong&gt;délka každé hrany je 1&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Nejkratší sled je vždy &lt;strong&gt;cestou&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Ohodocený graf&lt;/strong&gt; je ten, která má &lt;strong&gt;každou hranu ohodnocenou&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Kladně ohodnocený graf&lt;/strong&gt; je ten, který má &lt;strong&gt;všechny ohodnocení kladné&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Délka ohodnoceného sledu&lt;/strong&gt; je &lt;strong&gt;součet vah&lt;/strong&gt; všech jeho hran&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+    &lt;img src=&#34;../image-18.png&#34; alt=&#34;alt text&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;h2&gt;Dijkstrův algoritmus&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;dijkstrův-algoritmus&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#dijkstr%c5%afv-algoritmus&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Využívá se pro &lt;strong&gt;hledání nejkratší&lt;/strong&gt; (ohodnocené) &lt;strong&gt;cesty&lt;/strong&gt; mezi &lt;strong&gt;dvěma vrcholy&lt;/strong&gt; váženého (kladně ohodnoceného) grafu&lt;/li&gt;
+&lt;li&gt;Najde vzdálenosti z jednoho vrcholu do ostatních (místo mezi všemi dvojicemi vrcholů)&lt;/li&gt;
+&lt;li&gt;Reálné využití například pro vyhledávání autobusových spojení&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

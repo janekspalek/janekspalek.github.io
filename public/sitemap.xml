@@ -2,26 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/</loc>
+    <loc>http://localhost:49982/</loc>
     <lastmod>2024-12-03T13:31:30+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/</loc>
+    <loc>http://localhost:49982/posts/</loc>
     <lastmod>2024-12-03T13:31:30+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>http://localhost:49982/predmety/dim/grafy/</loc>
   </url><url>
-    <loc>http://localhost:1313/predmety/pos/cviceni/</loc>
+    <loc>http://localhost:49982/predmety/pos/test-1/</loc>
   </url><url>
-    <loc>http://localhost:1313/predmety/pos/cviceni/nat/</loc>
+    <loc>http://localhost:49982/predmety/pos/7-ethernet/</loc>
   </url><url>
-    <loc>http://localhost:1313/predmety/pos/</loc>
+    <loc>http://localhost:49982/predmety/pos/8-adresovani/</loc>
   </url><url>
-    <loc>http://localhost:1313/predmety/</loc>
+    <loc>http://localhost:49982/categories/</loc>
   </url><url>
-    <loc>http://localhost:1313/predmety/pos/cviceni/routery/</loc>
+    <loc>http://localhost:49982/predmety/dim/</loc>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>http://localhost:49982/predmety/pos/</loc>
   </url><url>
-    <loc>http://localhost:1313/predmety/pos/cviceni/vlan/</loc>
+    <loc>http://localhost:49982/predmety/</loc>
+  </url><url>
+    <loc>http://localhost:49982/tags/</loc>
   </url>
 </urlset>
