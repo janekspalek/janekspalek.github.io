@@ -1,5 +1,34 @@
-baseURL: https://example.org/
+baseURL: https://janekspalek.github.io/
 languageCode: en-us
-title: My New Hugo Site
+title: janekspalek 🤝
 
 theme: hextra
+
+markup:
+  # allow raw html
+  goldmark:
+    renderer:
+      unsafe: true
+
+  # enable hextra syntax highlight
+  highlight:
+    noClasses: false
+
+menu:
+  main:
+    - name: Předměty
+      pageRef: /predmety
+      weight: 1
+    - name: Search
+      weight: 4
+      params:
+        type: search
+
+params:
+  navbar:
+    displayTitle: true
+    displayLogo: false
+
+  footer:
+    displayCopyright: false
+    displayPoweredBy: false
