@@ -691,6 +691,175 @@ Router# show ip dhcp pool&lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;hextra-code
 
   
 &lt;/div&gt;
+&lt;h2&gt;ACL&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;acl&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#acl&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Všechny pakety, které se nerovnaly žádnému pravidlu se vyhodí&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Vždy je nutnost povolit i&lt;/strong&gt; &lt;code&gt;zpětný směr&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Každý záznam se do access-listu se přidává &lt;strong&gt;postupně&lt;/strong&gt; , &lt;strong&gt;nakonec&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;any&lt;/code&gt; = &lt;strong&gt;libovolná&lt;/strong&gt; IP adresa + wildcard maska 255.255.255.255&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;host x.x.x.x&lt;/code&gt; = IP adresa x.x.x.x + wildcard maska 0.0.0.0&lt;/li&gt;
+&lt;li&gt;Když povolujeme cokoliv s TCP, musíme na zpětný směr dát &lt;code&gt;established&lt;/code&gt;. Tím povolíme jen komunikaci, která byla zahájena z naší vnitřní sítě. Je to kvůli tomu jak TCP navazuje spojení - three-way-handshake&lt;/li&gt;
+&lt;li&gt;Pro &lt;strong&gt;ping&lt;/strong&gt; použijeme &lt;code&gt;echo&lt;/code&gt; a &lt;code&gt;echo-reply&lt;/code&gt; (odpověď z pingu)&lt;/li&gt;
+&lt;li&gt;U &lt;strong&gt;SMTP pozor&lt;/strong&gt; - může se chovat jako server i jako klient&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;1. Vytvoření access listu&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;1-vytvoření-access-listu&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#1-vytvo%c5%99en%c3%ad-access-listu&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;PROTOCOL&lt;/code&gt; - TCP, UDP, ICMP nebo IP (pro všechny protokoly)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;SOURCE_PORT&lt;/code&gt; &lt;code&gt;DESTINATION_PORT&lt;/code&gt; - porty pro služby jako HTTP (80), před portem musí být &lt;code&gt;eq&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code&#34;&gt;
+  
+
+&lt;pre&gt;&lt;code&gt;access-list &amp;lt;NUMBER&amp;gt; {permit|deny} &amp;lt;PROTOCOL&amp;gt; &amp;lt;SOURCE_IP&amp;gt; &amp;lt;WILDCARD_MASK&amp;gt; [&amp;lt;SOURCE_PORT&amp;gt;] &amp;lt;DESTINATION_IP&amp;gt; &amp;lt;WILDCARD_MASK&amp;gt; [&amp;lt;DESTINATION_PORT&amp;gt;] [PROTOCOL_PARAMETERS]&lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0&#34;&gt;
+  &lt;button
+    class=&#34;hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50&#34;
+    title=&#34;Copy code&#34;
+  &gt;
+    &lt;div class=&#34;copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4&#34;&gt;&lt;/div&gt;
+    &lt;div class=&#34;success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4&#34;&gt;&lt;/div&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+
+  
+&lt;/div&gt;
+&lt;h3&gt;2. Přiřazení ACL na rozhraní&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;2-přiřazení-acl-na-rozhraní&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#2-p%c5%99i%c5%99azen%c3%ad-acl-na-rozhran%c3%ad&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;div class=&#34;hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code&#34;&gt;
+  
+
+&lt;pre&gt;&lt;code&gt;Router(config)# interface &amp;lt;INTERFACE&amp;gt;
+Router(config-if)# ip access-group &amp;lt;ACCESS_LIST_NUMBER&amp;gt; {in|out}&lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0&#34;&gt;
+  &lt;button
+    class=&#34;hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50&#34;
+    title=&#34;Copy code&#34;
+  &gt;
+    &lt;div class=&#34;copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4&#34;&gt;&lt;/div&gt;
+    &lt;div class=&#34;success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4&#34;&gt;&lt;/div&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+
+  
+&lt;/div&gt;
+&lt;h3&gt;ACL příklad 1&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;acl-příklad-1&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#acl-p%c5%99%c3%adklad-1&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Zakažte veškerý provoz, který nesměřuje na proxy server poskytovatele 40.0.0.1
+&lt;img src=&#34;http://localhost:51910/images/priklad1.png&#34; alt=&#34;alt text&#34; loading=&#34;lazy&#34; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code&#34;&gt;
+  
+
+&lt;pre&gt;&lt;code&gt;-- Odchozí směr (OUT)
+Router(config)# access-list 101 permit ip any host 40.0.0.1
+Router(config)# interface gi0/0/0
+Router(config-if)# ip access-group 101 out
+------------------------------------------
+-- Příchozí směr (IN)
+Router(config)# access-list 102 permit ip host 40.0.0.1 any
+Router(config)# interface gi0/0/0
+Router(config-if)# ip access-group 102 in&lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0&#34;&gt;
+  &lt;button
+    class=&#34;hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50&#34;
+    title=&#34;Copy code&#34;
+  &gt;
+    &lt;div class=&#34;copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4&#34;&gt;&lt;/div&gt;
+    &lt;div class=&#34;success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4&#34;&gt;&lt;/div&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+
+  
+&lt;/div&gt;
+&lt;h3&gt;ACL příklad 2&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;acl-příklad-2&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#acl-p%c5%99%c3%adklad-2&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Povolte do Internetu protokoly DNS a HTTP(S).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code&#34;&gt;
+  
+
+&lt;pre&gt;&lt;code&gt;-- Odchozí směr (OUT)
+Router(config)# access-list 103 permit udp any any eq 53
+Router(config)# access-list 103 permit tcp any any eq 53
+Router(config)# access-list 103 permit tcp any any eq 80
+Router(config)# access-list 103 permit tcp any any eq 443
+------------------------------------------
+-- Příchozí směr (IN)
+Router(config)# access-list 104 permit udp any eq 53 any
+Router(config)# access-list 104 permit tcp any eq 53 any established
+Router(config)# access-list 104 permit tcp any eq 80 any established
+Router(config)# access-list 104 permit tcp any eq 443 any established&lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0&#34;&gt;
+  &lt;button
+    class=&#34;hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50&#34;
+    title=&#34;Copy code&#34;
+  &gt;
+    &lt;div class=&#34;copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4&#34;&gt;&lt;/div&gt;
+    &lt;div class=&#34;success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4&#34;&gt;&lt;/div&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+
+  
+&lt;/div&gt;
+&lt;h3&gt;ACL příklad 3&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;acl-příklad-3&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#acl-p%c5%99%c3%adklad-3&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Zakažte pro síť 10.0.20.0/24 ICMP provoz s výjimkou použití příkazu ping do vnější sítě. Veškerý další provoz je povolen.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code&#34;&gt;
+  
+
+&lt;pre&gt;&lt;code&gt;-- Odchozí směr (OUT)
+Router(config)# access-list 105 permit icmp 10.0.20.0 0.0.0.255 any echo
+Router(config)# access-list 105 deny icmp 10.0.20.0 0.0.0.255 any
+Router(config)# access-list 105 permit ip any any
+------------------------------------------
+-- Příchozí směr (IN)
+Router(config)# access-list 106 permit icmp any 10.0.20.0 0.0.0.255 echo-reply
+Router(config)# access-list 106 deny icmp any 10.0.20.0 0.0.0.255
+Router(config)# access-list 106 permit ip any any&lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0&#34;&gt;
+  &lt;button
+    class=&#34;hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50&#34;
+    title=&#34;Copy code&#34;
+  &gt;
+    &lt;div class=&#34;copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4&#34;&gt;&lt;/div&gt;
+    &lt;div class=&#34;success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4&#34;&gt;&lt;/div&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+
+  
+&lt;/div&gt;
+&lt;h3&gt;ACL příklad 4&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;acl-příklad-4&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#acl-p%c5%99%c3%adklad-4&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Povolte přístup z vnějšku na POP3 servery v síti 100.10.20.40/30 a SMTP server 100.10.20.45.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code&#34;&gt;
+  
+
+&lt;pre&gt;&lt;code&gt;-- Odchozí směr (OUT)
+Router(config)# access-list 107 permit tcp 100.10.20.40 0.0.0.3 eq 110 any established
+Router(config)# access-list 107 permit tcp host 100.10.20.45 eq 25 any established
+Router(config)# access-list 107 permit tcp host 100.10.20.45 any eq 25
+------------------------------------------
+-- Příchozí směr (IN)
+Router(config)# access-list 108 permit tcp any 100.10.20.40 0.0.0.3 eq 110
+Router(config)# access-list 108 permit tcp any host 100.10.20.45 eq 25
+Router(config)# access-list 108 permit tcp any eq 25 host 100.10.20.45 established&lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0&#34;&gt;
+  &lt;button
+    class=&#34;hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50&#34;
+    title=&#34;Copy code&#34;
+  &gt;
+    &lt;div class=&#34;copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4&#34;&gt;&lt;/div&gt;
+    &lt;div class=&#34;success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4&#34;&gt;&lt;/div&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+
+  
+&lt;/div&gt;
+&lt;h3&gt;Seznam portů pro jednotlivé služby&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;seznam-portů-pro-jednotlivé-služby&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#seznam-port%c5%af-pro-jednotliv%c3%a9-slu%c5%beby&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;22 - SSH&lt;/li&gt;
+&lt;li&gt;23 - TELNET&lt;/li&gt;
+&lt;li&gt;25 - SMTP&lt;/li&gt;
+&lt;li&gt;80 - HTTP&lt;/li&gt;
+&lt;li&gt;110 - POP3&lt;/li&gt;
+&lt;li&gt;143 - IMAP&lt;/li&gt;
+&lt;li&gt;Další - FTP (20, 21), HTTPS (443), DHCP (67, 68), DNS (53)&lt;/li&gt;
+&lt;/ul&gt;
 
       </description>
     </item>
