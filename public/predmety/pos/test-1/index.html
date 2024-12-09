@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=49982&amp;path=livereload" data-no-instant defer></script>
+<html lang="en"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=51910&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="noindex, nofollow" />
@@ -10,8 +10,8 @@
 <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
 <link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
-<title>1. Praktický test – janekspalek 🤝</title>
-  <meta name="description" content="VLAN 1. Vytvoření VLAN VLAN_ID je číslo VLAN (např. 10, 20 atd.) VLAN_NAME je libovolný název VLAN, třeba Sales, IT Switch(config)# vlan &lt;VLAN_ID&gt; Switch(config-vlan)# name &lt;VLAN_NAME&gt; 2. Přiřazení Access portů do VLAN INTERFACE je název portu, např. FastEthernet 0/1 Switch(config)# interface &lt;INTERFACE&gt; Switch(config-if)# switchport mode access Switch(config-if)# switchport access vlan &lt;VLAN_ID&gt; 3. Přiřazení Trunk portů do VLAN Switch(config)# interface &lt;INTERFACE&gt; Switch(config-if)# switchport mode trunk Switch(config-if)# switchport trunk allowed vlan 10,20 (OPTIONAL) - Nastavení nativní VLAN Switch(config-if)# switchport trunk native vlan &lt;VLAN_ID&gt; 4. Odstranění VLAN Switch(config)# no vlan &lt;VLAN_ID&gt; 5. Zobrazení VLAN Switch# show vlan brief RIPv2 Před konfigurací musíme všude nastavit IPv4 adresy a gateway Na rozhraních no shutdown aby bylo zapnuté Nejprve se RIP zapne na celém routeru, vybere se verze 2 a přidají se jednotlivé networky připojené přímo k routeru 1. Aktivace RIPv2 Router(config)# router rip Router(config-router)# version 2 2. Sítě, které se mají propagovat Pro každou síť, kterou router zná (má k ní připojené rozhraní), jeden řádek network Router(config-router)# network 192.168.1.0 Router(config-router)# network 10.0.0.0 3. Vypnutí RIP na určitých rozhraních Pokud nechceme, aby router posílal RIP aktualizace na určité rozhraní (např. do LAN sítě s klienty) Router(config-router)# passive-interface &lt;INTERFACE&gt; 4. Statická výchozí cesta Všechny pakety které jdou na IP adresu, která nemá cestu v RIP tabulce NEXT_HOP je IP adresa směrovače, kterým by měl paket projít na cestě k cílové IP adrese Router(config)# ip route 0.0.0.0 0.0.0.0 &lt;NEXT_HOP&gt; Router(config-router)# default-information originate 5. Zobrazení směrovací tabulky Router# show ip route Router# show ip rip database RIPng Router musí mít povolené adresování pomocí IPv6 příkazem ipv6 unicast-routing Router i PC musí mít nakonfigurované IPv6 adresy a gateway Pak stačí jen zapnout ipv6 RIP na každém rozhraní 1. Aktivace RIPng RIPng se aktivuje na každém rozhraní zvlášť PROCESS_NAME je libovolné jméno procesu, např. RIPng1 Router(config)# ipv6 router rip &lt;PROCESS_NAME&gt; 2. Přiřazení RIPng k rozhraní Pro každé rozhraní, které chceme přidat do RIPng, aktivujeme RIPng se stejným názvem procesu Router(config)# interface &lt;INTERFACE&gt; Router(config-if)# ipv6 rip &lt;PROCESS_NAME&gt; enable 3. Aktivace automatické propagace sítí ASI NENI POTREBA" /><link rel="canonical" href="http://localhost:49982/predmety/pos/test-1/" itemprop="url" />
+<title>1. Praktický test – všb jojo 🤝</title>
+  <meta name="description" content="VLAN 1. Vytvoření VLAN VLAN_ID je číslo VLAN (např. 10, 20 atd.) VLAN_NAME je libovolný název VLAN, třeba Sales, IT Switch(config)# vlan &lt;VLAN_ID&gt; Switch(config-vlan)# name &lt;VLAN_NAME&gt; 2. Přiřazení Access portů do VLAN INTERFACE je název portu, např. FastEthernet 0/1 Switch(config)# interface &lt;INTERFACE&gt; Switch(config-if)# switchport mode access Switch(config-if)# switchport access vlan &lt;VLAN_ID&gt; 3. Přiřazení Trunk portů do VLAN Switch(config)# interface &lt;INTERFACE&gt; Switch(config-if)# switchport mode trunk Switch(config-if)# switchport trunk allowed vlan 10,20 (OPTIONAL) - Nastavení nativní VLAN Switch(config-if)# switchport trunk native vlan &lt;VLAN_ID&gt; 4. Odstranění VLAN Switch(config)# no vlan &lt;VLAN_ID&gt; 5. Zobrazení VLAN Switch# show vlan brief RIPv2 Před konfigurací musíme všude nastavit IPv4 adresy a gateway Na rozhraních no shutdown aby bylo zapnuté Nejprve se RIP zapne na celém routeru, vybere se verze 2 a přidají se jednotlivé networky připojené přímo k routeru 1. Aktivace RIPv2 Router(config)# router rip Router(config-router)# version 2 2. Sítě, které se mají propagovat Pro každou síť, kterou router zná (má k ní připojené rozhraní), jeden řádek network Router(config-router)# network 192.168.1.0 Router(config-router)# network 10.0.0.0 3. Vypnutí RIP na určitých rozhraních Pokud nechceme, aby router posílal RIP aktualizace na určité rozhraní (např. do LAN sítě s klienty) Router(config-router)# passive-interface &lt;INTERFACE&gt; 4. Statická výchozí cesta Všechny pakety které jdou na IP adresu, která nemá cestu v RIP tabulce NEXT_HOP je IP adresa směrovače, kterým by měl paket projít na cestě k cílové IP adrese Router(config)# ip route 0.0.0.0 0.0.0.0 &lt;NEXT_HOP&gt; Router(config-router)# default-information originate 5. Zobrazení směrovací tabulky Router# show ip route Router# show ip rip database RIPng Router musí mít povolené adresování pomocí IPv6 příkazem ipv6 unicast-routing Router i PC musí mít nakonfigurované IPv6 adresy a gateway Pak stačí jen zapnout ipv6 RIP na každém rozhraní 1. Aktivace RIPng RIPng se aktivuje na každém rozhraní zvlášť PROCESS_NAME je libovolné jméno procesu, např. RIPng1 Router(config)# ipv6 router rip &lt;PROCESS_NAME&gt; 2. Přiřazení RIPng k rozhraní Pro každé rozhraní, které chceme přidat do RIPng, aktivujeme RIPng se stejným názvem procesu Router(config)# interface &lt;INTERFACE&gt; Router(config-if)# ipv6 rip &lt;PROCESS_NAME&gt; enable 3. Aktivace automatické propagace sítí ASI NENI POTREBA" /><link rel="canonical" href="http://localhost:51910/predmety/pos/test-1/" itemprop="url" />
 
 <meta property="og:title" content="1. Praktický test" />
 <meta property="og:description" content="VLAN
@@ -225,7 +225,7 @@ Router(config-if)# ipv6 rip &lt;PROCESS_NAME&gt; enable
 3. Aktivace automatické propagace sítí
     ASI NENI POTREBA" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://localhost:49982/predmety/pos/test-1/" /><meta property="article:section" content="predmety" />
+<meta property="og:url" content="http://localhost:51910/predmety/pos/test-1/" /><meta property="article:section" content="predmety" />
 
 
 
@@ -273,7 +273,7 @@ Router(config-if)# ipv6 rip &lt;PROCESS_NAME&gt; enable
 
   <nav class="hx-mx-auto hx-flex hx-items-center hx-justify-end hx-gap-2 hx-h-16 hx-px-6 hx-max-w-[90rem]">
     <a class="hx-flex hx-items-center hover:hx-opacity-75 ltr:hx-mr-auto rtl:hx-ml-auto" href="/">
-        <span class="hx-mx-2 hx-font-extrabold hx-inline hx-select-none" title="janekspalek 🤝">janekspalek 🤝</span>
+        <span class="hx-mx-2 hx-font-extrabold hx-inline hx-select-none" title="všb jojo 🤝">všb jojo 🤝</span>
     </a><a
             title="Předměty"
             href="/predmety"
@@ -441,17 +441,9 @@ Router(config-if)# ipv6 rip &lt;PROCESS_NAME&gt; enable
             </li><li class="hx-flex hx-flex-col "><a
     class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
-    href="/predmety/pos/7-ethernet/"
+    href="/predmety/pos/test-2/"
     
-  >7) Ethernet
-    </a>
-              
-            </li><li class="hx-flex hx-flex-col "><a
-    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
-    href="/predmety/pos/8-adresovani/"
-    
-  >8) Adresování
+  >2. Praktický test
     </a>
               
             </li></ul>
@@ -499,17 +491,9 @@ Router(config-if)# ipv6 rip &lt;PROCESS_NAME&gt; enable
             </li><li class="hx-flex hx-flex-col "><a
     class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
-    href="/predmety/pos/7-ethernet/"
+    href="/predmety/pos/test-2/"
     
-  >7) Ethernet
-    </a>
-              
-            </li><li class="hx-flex hx-flex-col "><a
-    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
-    href="/predmety/pos/8-adresovani/"
-    
-  >8) Adresování
+  >2. Praktický test
     </a>
               
             </li></ul>
@@ -1259,10 +1243,10 @@ Router(config)# ip nat inside source list 1 pool MujNATPool</code></pre><div cla
         </div>
         <div class="hx-mt-16"></div>
         <div class="hx-mb-8 hx-flex hx-items-center hx-border-t hx-pt-8 dark:hx-border-neutral-800 contrast-more:hx-border-neutral-400 dark:contrast-more:hx-border-neutral-400 print:hx-hidden"><a
-        href="/predmety/pos/7-ethernet/"
-        title="7) Ethernet"
+        href="/predmety/pos/test-2/"
+        title="2. Praktický test"
         class="hx-flex hx-max-w-[50%] hx-items-center hx-gap-1 hx-py-4 hx-text-base hx-font-medium hx-text-gray-600 hx-transition-colors [word-break:break-word] hover:hx-text-primary-600 dark:hx-text-gray-300 md:hx-text-lg ltr:hx-ml-auto ltr:hx-pl-4 ltr:hx-text-right rtl:hx-mr-auto rtl:hx-pr-4 rtl:hx-text-left"
-      >7) Ethernet<svg class="hx-inline hx-h-5 hx-shrink-0 rtl:-hx-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></a></div>
+      >2. Praktický test<svg class="hx-inline hx-h-5 hx-shrink-0 rtl:-hx-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></a></div>
         
       </main>
     </article>

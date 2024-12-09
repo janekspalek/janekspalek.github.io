@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>janekspalek 🤝 – Počítačové sítě</title>
-    <link>http://localhost:49982/predmety/pos/</link>
-    <description>Recent content in Počítačové sítě on janekspalek 🤝</description>
+    <title>všb jojo 🤝 – Počítačové sítě</title>
+    <link>http://localhost:51910/predmety/pos/</link>
+    <description>Recent content in Počítačové sítě on všb jojo 🤝</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	  <atom:link href="http://localhost:49982/predmety/pos/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="http://localhost:51910/predmety/pos/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -16,10 +16,10 @@
     
     <item>
       <title>1. Praktický test</title>
-      <link>http://localhost:49982/predmety/pos/test-1/</link>
+      <link>http://localhost:51910/predmety/pos/test-1/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:49982/predmety/pos/test-1/</guid>
+      <guid>http://localhost:51910/predmety/pos/test-1/</guid>
       <description>
         
         
@@ -579,90 +579,118 @@ Router(config)# ip nat inside source list 1 pool MujNATPool&lt;/code&gt;&lt;/pre
   
 &lt;/div&gt;
 &lt;h2&gt;Tabulka masek&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;tabulka-masek&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#tabulka-masek&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:49982/images/subnet-mask.png&#34; alt=&#34;Tabulka masek&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+    &lt;a href=&#34;#tabulka-masek&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:51910/images/subnet-mask.png&#34; alt=&#34;Tabulka masek&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 
       </description>
     </item>
     
     <item>
-      <title>7) Ethernet</title>
-      <link>http://localhost:49982/predmety/pos/7-ethernet/</link>
+      <title>2. Praktický test</title>
+      <link>http://localhost:51910/predmety/pos/test-2/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:49982/predmety/pos/7-ethernet/</guid>
+      <guid>http://localhost:51910/predmety/pos/test-2/</guid>
       <description>
         
         
-        &lt;ul&gt;
-&lt;li&gt;Technologie používaná pro přenos dat v &lt;strong&gt;lokálních sítích LAN&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;Nejpoužívanější standard pro kabelové sítě&lt;/li&gt;
-&lt;li&gt;Definuje pravidla pro &lt;strong&gt;formát rámců&lt;/strong&gt;, &lt;strong&gt;rychlosti přenosu_&lt;/strong&gt; a &lt;strong&gt;typy kabeláže&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;Využívá &lt;strong&gt;half-duplex&lt;/strong&gt; (pouze jedním směrem najednou, používá &lt;strong&gt;CSMA/CD&lt;/strong&gt;) i &lt;strong&gt;full-duplex&lt;/strong&gt; (oběma směry naráz)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;IEEE 802.3&lt;/strong&gt; určuje aktuální specifikace pro Ethernetové sítě&lt;/li&gt;
+        &lt;h2&gt;DHCP&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;dhcp&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#dhcp&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Před konfigurací musíme nastavit na rozhraní routeru &lt;code&gt;IPv4 adresy&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;Pojmy v názvech Ethernet standardů:&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;pojmy-v-názvech-ethernet-standardů&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#pojmy-v-n%c3%a1zvech-ethernet-standard%c5%af&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;[Číslo]&lt;/strong&gt; = přenosová rychlost, např. 10 Mbps, 100 Mbps, 1 Gbps&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;[Base/Broad]&lt;/strong&gt; = zda je přenos baseband (celé pásmo pro data) nebo broadband (sdílené pásmo)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;[Medium]&lt;/strong&gt; = typ kabelu, např T (twisted pair), F (fiber optic)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;10Base5 (Thick Ethernet)&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;10base5-thick-ethernet&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#10base5-thick-ethernet&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;Levnější varianta s tenčím koaxiálním kabelem&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;10Base-T&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;10base-t&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#10base-t&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;Připojení pomocí twisted pair (kroucená dvojlinka)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;Fast Ethernet (100 Mbps, 100Base-T)&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;fast-ethernet-100-mbps-100base-t&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#fast-ethernet-100-mbps-100base-t&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;Založen na &lt;strong&gt;10Base-T&lt;/strong&gt;, ale s vyšší rychlostí &lt;strong&gt;100 Mbps&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;Používá kabely UTP kategorie 5 (&lt;strong&gt;maximální délka 100 metrů&lt;/strong&gt;)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;Gigabit Ethernet (1000 Mbps)&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;gigabit-ethernet-1000-mbps&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#gigabit-ethernet-1000-mbps&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;Vyšší rychlost 1 Gbps, používá optická vlákna nebo UTP kabely&lt;/li&gt;
-&lt;li&gt;Např. 1000Base-T (UTP)&lt;/li&gt;
-&lt;/ul&gt;
+&lt;div class=&#34;hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code&#34;&gt;
+  
 
-      </description>
-    </item>
-    
-    <item>
-      <title>8) Adresování</title>
-      <link>http://localhost:49982/predmety/pos/8-adresovani/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:49982/predmety/pos/8-adresovani/</guid>
-      <description>
-        
-        
-        &lt;h2&gt;IPv4 adresy&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;ipv4-adresy&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#ipv4-adresy&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;Mají &lt;strong&gt;32 bitů&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;Jsou zapsány jako čtyři desítkové hodnoty oddělené tečkami (&lt;code&gt;192.168.1.1&lt;/code&gt;)&lt;/li&gt;
-&lt;li&gt;Skládají se z &lt;strong&gt;části pro síť&lt;/strong&gt; a &lt;strong&gt;části pro zařízení&lt;/strong&gt;&lt;/li&gt;
+&lt;pre&gt;&lt;code&gt;Router(config)# interface &amp;lt;INTERFACE&amp;gt;
+Router(config-if)# ip address &amp;lt;IP_ADDRESS&amp;gt; &amp;lt;SUBNET_MASK&amp;gt;
+Router(config-if)# no shutdown&lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0&#34;&gt;
+  &lt;button
+    class=&#34;hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50&#34;
+    title=&#34;Copy code&#34;
+  &gt;
+    &lt;div class=&#34;copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4&#34;&gt;&lt;/div&gt;
+    &lt;div class=&#34;success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4&#34;&gt;&lt;/div&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+
+  
+&lt;/div&gt;
+&lt;h3&gt;1. Konfigurace DHCP poolu&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;1-konfigurace-dhcp-poolu&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#1-konfigurace-dhcp-poolu&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;POOL_NAME&lt;/code&gt; je název DHCP poolu (např. mujPool)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;NETWORK&lt;/code&gt; a &lt;code&gt;SUBNET_MASK&lt;/code&gt; definují obsluhovanou síť&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;DEFAULT_ROUTER&lt;/code&gt; je gateway (výchozí brána) pro klienty&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;DNS_SERVER&lt;/code&gt; je &lt;strong&gt;volitelný&lt;/strong&gt; server DNS&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;IPv6 adresy&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;ipv6-adresy&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#ipv6-adresy&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;Mají &lt;strong&gt;128 bitů&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;Jsou zapsány v hexadecimálním formátu (&lt;code&gt;2001::8a2e:0370:7334&lt;/code&gt;)&lt;/li&gt;
-&lt;li&gt;Nemají broadcasty - využívají &lt;strong&gt;multicasty&lt;/strong&gt; místo broadcastů&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;SLAAC&lt;/strong&gt; (Stateless Address AutoConfiguration) - &lt;strong&gt;automatické přidělování adres&lt;/strong&gt; na základě prefixu zadaného routerem a MAC adresou zařízení&lt;/li&gt;
+&lt;div class=&#34;hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code&#34;&gt;
+  
+
+&lt;pre&gt;&lt;code&gt;Router(config)# ip dhcp pool &amp;lt;POOL_NAME&amp;gt;
+Router(dhcp-config)# network &amp;lt;NETWORK&amp;gt; &amp;lt;SUBNET_MASK&amp;gt;
+Router(dhcp-config)# default-router &amp;lt;DEFAULT_ROUTER&amp;gt;
+Router(dhcp-config)# dns-server &amp;lt;DNS_SERVER&amp;gt;
+
+Příklad:
+Router(config)# ip dhcp pool mujPool
+Router(dhcp-config)# network 192.168.1.0 255.255.255.0
+Router(dhcp-config)# default-router 192.168.1.1
+Router(dhcp-config)# dns-server 8.8.8.8&lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0&#34;&gt;
+  &lt;button
+    class=&#34;hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50&#34;
+    title=&#34;Copy code&#34;
+  &gt;
+    &lt;div class=&#34;copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4&#34;&gt;&lt;/div&gt;
+    &lt;div class=&#34;success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4&#34;&gt;&lt;/div&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+
+  
+&lt;/div&gt;
+&lt;h3&gt;2. Vyloučení adres z DHCP poolu&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;2-vyloučení-adres-z-dhcp-poolu&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#2-vylou%c4%8den%c3%ad-adres-z-dhcp-poolu&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Pokud máme některé adresy, které chceme &lt;strong&gt;zarezervovat&lt;/strong&gt; (např. pro servery nebo tiskárny)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;Porty - adresy služeb, procesů&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;porty---adresy-služeb-procesů&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#porty---adresy-slu%c5%beeb-proces%c5%af&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;Porty identifikují jednotlivé služby nebo procesy na síťovém zařízení&lt;/li&gt;
-&lt;li&gt;Číslo portu je &lt;strong&gt;16bitové&lt;/strong&gt; (&lt;strong&gt;0-65535&lt;/strong&gt;)&lt;/li&gt;
-&lt;li&gt;Využívá se pro protokoly &lt;strong&gt;TCP&lt;/strong&gt; a &lt;strong&gt;UDP&lt;/strong&gt;&lt;/li&gt;
+&lt;div class=&#34;hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code&#34;&gt;
+  
+
+&lt;pre&gt;&lt;code&gt;Router(config)# ip dhcp excluded-address &amp;lt;START_IP&amp;gt; &amp;lt;END_IP&amp;gt;
+
+Příklad:
+Router(config)# ip dhcp excluded-address 192.168.1.1 192.168.1.10&lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0&#34;&gt;
+  &lt;button
+    class=&#34;hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50&#34;
+    title=&#34;Copy code&#34;
+  &gt;
+    &lt;div class=&#34;copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4&#34;&gt;&lt;/div&gt;
+    &lt;div class=&#34;success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4&#34;&gt;&lt;/div&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+
+  
+&lt;/div&gt;
+&lt;h3&gt;3. Aktivace DHCP na jednotlivých PC&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;3-aktivace-dhcp-na-jednotlivých-pc&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#3-aktivace-dhcp-na-jednotliv%c3%bdch-pc&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;V Packet Traceru musíme u každého PC povolit DHCP kliknutím na tlačítko DHCP v sekci IP configuration&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;MAC adresy&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;mac-adresy&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#mac-adresy&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;Mají &lt;strong&gt;48 bitů&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Jedinečný&lt;/strong&gt; identifikátor přiřazený každému fyzickému zařízení v síti, které podporuje síťové připojení&lt;/li&gt;
-&lt;li&gt;Jsou zapsány v hexadecimálním formátu (&lt;code&gt;0:1A:2B:3C:4D:5E&lt;/code&gt;)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;První tři oktety jsou ID výrobce, zbylé tři jsou sériové číslo&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;
+    &lt;img src=&#34;../image.png&#34; alt=&#34;DHCP Packet Tracer&#34; loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+&lt;h3&gt;3. Kontrolní příkazy pro DHCP&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;3-kontrolní-příkazy-pro-dhcp&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#3-kontroln%c3%ad-p%c5%99%c3%adkazy-pro-dhcp&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;div class=&#34;hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code&#34;&gt;
+  
+
+&lt;pre&gt;&lt;code&gt;Router# show ip dhcp binding
+
+Router# show ip dhcp pool&lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0&#34;&gt;
+  &lt;button
+    class=&#34;hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50&#34;
+    title=&#34;Copy code&#34;
+  &gt;
+    &lt;div class=&#34;copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4&#34;&gt;&lt;/div&gt;
+    &lt;div class=&#34;success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4&#34;&gt;&lt;/div&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+
+  
+&lt;/div&gt;
 
       </description>
     </item>
