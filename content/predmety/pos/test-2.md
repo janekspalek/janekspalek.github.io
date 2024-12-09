@@ -48,7 +48,7 @@ Router(config)# ip dhcp excluded-address 192.168.1.1 192.168.1.10
 
 - V Packet Traceru musíme u každého PC povolit DHCP kliknutím na tlačítko DHCP v sekci IP configuration
 
-![DHCP Packet Tracer](image.png)
+![DHCP Packet Tracer](/images/dhcp.png)
 
 ### 3. Kontrolní příkazy pro DHCP
 
