@@ -68,6 +68,7 @@ Router# show ip dhcp pool
 - Když povolujeme cokoliv s TCP, musíme na zpětný směr dát `established`. Tím povolíme jen komunikaci, která byla zahájena z naší vnitřní sítě. Je to kvůli tomu jak TCP navazuje spojení - three-way-handshake
 - Pro **ping** použijeme `echo` a `echo-reply` (odpověď z pingu)
 - U **SMTP pozor** - může se chovat jako server i jako klient
+- **Anti-spoofing filtr** - zablokování paketů s falešnou zdrojovou IP adresou do naší sítě. Např. z adres 192.168.0.0/24, nebo 127.0.0.0/8
 
 ### 1. Vytvoření access listu
 
@@ -161,3 +162,93 @@ Router(config)# access-list 108 permit tcp any eq 25 host 100.10.20.45 establish
 - 110 - POP3
 - 143 - IMAP
 - Další - FTP (20, 21), HTTPS (443), DHCP (67, 68), DNS (53)
+
+## DNS
+
+- Informace níže jsou pravděpodobně zcela špatně
+
+### 1. Vytvoření zóny
+
+- V souboru `conf.local` přidám novou zónu pro moji doménu
+
+```{filename="conf.local"}
+zone "amioza.cz" {
+    type master;
+    file "/etc/bind/db.amioza"; // Cesta k souboru záznamů
+};
+```
+
+### 2. Soubor s DNS záznamy
+
+- Vytvořím nový soubor s názvem `db.<jmeno_firmy>`
+
+```{filename="db.amioza"}
+$ORIGIN amioza.cz.
+
+$TTL 0
+
+@       IN SOA  b.ns.amioza.cz. admin.amioza.cz. (
+                20241210  // Seriové číslo (rok/měsíc/den + verze)
+                5m        // Refresh (sekundy)
+                10m       // Retry (sekundy)
+                10m       // Expire (sekundy)
+                0         // Minimum TTL (sekundy)
+)
+@        NS   b.ns.amioza.cz.
+
+b.ns   A    192.0.2.10  // IP adresa mého PC - pomocí ifconfig eth0
+```
+
+### 3. Soubor s DNS záznamy - pro všechny pc
+
+- Do stejného souboru jako v minulém bodu přidám na jeho konec záznam pro každý PC
+- IP adresy dle zadání
+
+```{filename="db.amioza"}
+pc-1   A  10.0.0.2
+     TXT "PC 1"
+
+pc-2   A  10.0.0.3
+     TXT "PC 2"
+```
+
+### 4. Soubor s reverzními DNS záznamy
+
+- V souboru `conf.local` přidám novou zónu pro reverzní záznamy
+
+```{filename="conf.local"}
+zone "214.167.90.in-addr.arpa" { // obrácená adresa sítě bez posledního oktetu
+    type master;
+    file "/etc/bind/db.214.167.90.in-addr.arpa";
+}
+```
+
+- Vytvořím nový soubor `db.214.167.90.in-addr.arpa`
+
+```{filename="db.214.167.90.in-addr.arpa"}
+$ORIGIN 214.167.90.in-addr.arpa.
+$TTL 0
+
+214.167.90.in-addr.arpa.       IN SOA  b.ns.amioza.cz. root.b.ns.amioza.cz. (
+                20241210  ; Seriové číslo (rok/měsíc/den + verze)
+                5m        ; Refresh (sekundy)
+                10m         ; Retry (sekundy)
+                10m       ; Expire (sekundy)
+                0        ; Minimum TTL (sekundy)
+)
+    NS   b.ns.amioza.cz.
+
+b.ns   A    192.0.2.10  ; IP adresa mého PC - pomocí ifconfig eth0
+```
+
+### 5. Konfigurace rekurze DNS + forwarders
+
+- Přidám do hlavního `conf.options` souboru
+
+```{filename="conf.local"}
+recursion: yes;
+forwarders {
+ 8.8.8.8; // nadřazený DNS server, idk
+};
+dnssec-validation no; // vypnutí dnssec, idk
+```

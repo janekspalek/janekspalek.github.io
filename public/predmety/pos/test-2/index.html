@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=51910&amp;path=livereload" data-no-instant defer></script>
+<html lang="en"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="noindex, nofollow" />
@@ -11,7 +11,7 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
 <link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
 <title>2. Praktický test – všb jojo 🤝</title>
-  <meta name="description" content="DHCP Před konfigurací musíme nastavit na rozhraní routeru IPv4 adresy Router(config)# interface &lt;INTERFACE&gt; Router(config-if)# ip address &lt;IP_ADDRESS&gt; &lt;SUBNET_MASK&gt; Router(config-if)# no shutdown 1. Konfigurace DHCP poolu POOL_NAME je název DHCP poolu (např. mujPool) NETWORK a SUBNET_MASK definují obsluhovanou síť DEFAULT_ROUTER je gateway (výchozí brána) pro klienty DNS_SERVER je volitelný server DNS Router(config)# ip dhcp pool &lt;POOL_NAME&gt; Router(dhcp-config)# network &lt;NETWORK&gt; &lt;SUBNET_MASK&gt; Router(dhcp-config)# default-router &lt;DEFAULT_ROUTER&gt; Router(dhcp-config)# dns-server &lt;DNS_SERVER&gt; Příklad: Router(config)# ip dhcp pool mujPool Router(dhcp-config)# network 192.168.1.0 255.255.255.0 Router(dhcp-config)# default-router 192.168.1.1 Router(dhcp-config)# dns-server 8.8.8.8 2. Vyloučení adres z DHCP poolu Pokud máme některé adresy, které chceme zarezervovat (např. pro servery nebo tiskárny) Router(config)# ip dhcp excluded-address &lt;START_IP&gt; &lt;END_IP&gt; Příklad: Router(config)# ip dhcp excluded-address 192.168.1.1 192.168.1.10 3. Aktivace DHCP na jednotlivých PC V Packet Traceru musíme u každého PC povolit DHCP kliknutím na tlačítko DHCP v sekci IP configuration " /><link rel="canonical" href="http://localhost:51910/predmety/pos/test-2/" itemprop="url" />
+  <meta name="description" content="DHCP Před konfigurací musíme nastavit na rozhraní routeru IPv4 adresy Router(config)# interface &lt;INTERFACE&gt; Router(config-if)# ip address &lt;IP_ADDRESS&gt; &lt;SUBNET_MASK&gt; Router(config-if)# no shutdown 1. Konfigurace DHCP poolu POOL_NAME je název DHCP poolu (např. mujPool) NETWORK a SUBNET_MASK definují obsluhovanou síť DEFAULT_ROUTER je gateway (výchozí brána) pro klienty DNS_SERVER je volitelný server DNS Router(config)# ip dhcp pool &lt;POOL_NAME&gt; Router(dhcp-config)# network &lt;NETWORK&gt; &lt;SUBNET_MASK&gt; Router(dhcp-config)# default-router &lt;DEFAULT_ROUTER&gt; Router(dhcp-config)# dns-server &lt;DNS_SERVER&gt; Příklad: Router(config)# ip dhcp pool mujPool Router(dhcp-config)# network 192.168.1.0 255.255.255.0 Router(dhcp-config)# default-router 192.168.1.1 Router(dhcp-config)# dns-server 8.8.8.8 2. Vyloučení adres z DHCP poolu Pokud máme některé adresy, které chceme zarezervovat (např. pro servery nebo tiskárny) Router(config)# ip dhcp excluded-address &lt;START_IP&gt; &lt;END_IP&gt; Příklad: Router(config)# ip dhcp excluded-address 192.168.1.1 192.168.1.10 3. Aktivace DHCP na jednotlivých PC V Packet Traceru musíme u každého PC povolit DHCP kliknutím na tlačítko DHCP v sekci IP configuration " /><link rel="canonical" href="http://localhost:1313/predmety/pos/test-2/" itemprop="url" />
 
 <meta property="og:title" content="2. Praktický test" />
 <meta property="og:description" content="DHCP
@@ -85,13 +85,13 @@ V Packet Traceru musíme u každého PC povolit DHCP kliknutím na tlačítko DH
 
 " />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://localhost:51910/predmety/pos/test-2/" /><meta property="article:section" content="predmety" />
+<meta property="og:url" content="http://localhost:1313/predmety/pos/test-2/" /><meta property="article:section" content="predmety" />
 
 
 
   <meta itemprop="name" content="2. Praktický test">
   <meta itemprop="description" content="DHCP Před konfigurací musíme nastavit na rozhraní routeru IPv4 adresy Router(config)# interface &lt;INTERFACE&gt; Router(config-if)# ip address &lt;IP_ADDRESS&gt; &lt;SUBNET_MASK&gt; Router(config-if)# no shutdown 1. Konfigurace DHCP poolu POOL_NAME je název DHCP poolu (např. mujPool) NETWORK a SUBNET_MASK definují obsluhovanou síť DEFAULT_ROUTER je gateway (výchozí brána) pro klienty DNS_SERVER je volitelný server DNS Router(config)# ip dhcp pool &lt;POOL_NAME&gt; Router(dhcp-config)# network &lt;NETWORK&gt; &lt;SUBNET_MASK&gt; Router(dhcp-config)# default-router &lt;DEFAULT_ROUTER&gt; Router(dhcp-config)# dns-server &lt;DNS_SERVER&gt; Příklad: Router(config)# ip dhcp pool mujPool Router(dhcp-config)# network 192.168.1.0 255.255.255.0 Router(dhcp-config)# default-router 192.168.1.1 Router(dhcp-config)# dns-server 8.8.8.8 2. Vyloučení adres z DHCP poolu Pokud máme některé adresy, které chceme zarezervovat (např. pro servery nebo tiskárny) Router(config)# ip dhcp excluded-address &lt;START_IP&gt; &lt;END_IP&gt; Příklad: Router(config)# ip dhcp excluded-address 192.168.1.1 192.168.1.10 3. Aktivace DHCP na jednotlivých PC V Packet Traceru musíme u každého PC povolit DHCP kliknutím na tlačítko DHCP v sekci IP configuration">
-  <meta itemprop="wordCount" content="652">
+  <meta itemprop="wordCount" content="912">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="2. Praktický test">
   <meta name="twitter:description" content="DHCP Před konfigurací musíme nastavit na rozhraní routeru IPv4 adresy Router(config)# interface &lt;INTERFACE&gt; Router(config-if)# ip address &lt;IP_ADDRESS&gt; &lt;SUBNET_MASK&gt; Router(config-if)# no shutdown 1. Konfigurace DHCP poolu POOL_NAME je název DHCP poolu (např. mujPool) NETWORK a SUBNET_MASK definují obsluhovanou síť DEFAULT_ROUTER je gateway (výchozí brána) pro klienty DNS_SERVER je volitelný server DNS Router(config)# ip dhcp pool &lt;POOL_NAME&gt; Router(dhcp-config)# network &lt;NETWORK&gt; &lt;SUBNET_MASK&gt; Router(dhcp-config)# default-router &lt;DEFAULT_ROUTER&gt; Router(dhcp-config)# dns-server &lt;DNS_SERVER&gt; Příklad: Router(config)# ip dhcp pool mujPool Router(dhcp-config)# network 192.168.1.0 255.255.255.0 Router(dhcp-config)# default-router 192.168.1.1 Router(dhcp-config)# dns-server 8.8.8.8 2. Vyloučení adres z DHCP poolu Pokud máme některé adresy, které chceme zarezervovat (např. pro servery nebo tiskárny) Router(config)# ip dhcp excluded-address &lt;START_IP&gt; &lt;END_IP&gt; Příklad: Router(config)# ip dhcp excluded-address 192.168.1.1 192.168.1.10 3. Aktivace DHCP na jednotlivých PC V Packet Traceru musíme u každého PC povolit DHCP kliknutím na tlačítko DHCP v sekci IP configuration">
@@ -273,6 +273,12 @@ V Packet Traceru musíme u každého PC povolit DHCP kliknutím na tlačítko DH
                 class="hx-flex hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [word-break:break-word] hx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:hx-border hx-gap-2 before:hx-opacity-25 before:hx-content-['#'] hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:hx-text-gray-900 contrast-more:dark:hx-text-gray-50 contrast-more:hx-border-transparent contrast-more:hover:hx-border-gray-900 contrast-more:dark:hover:hx-border-gray-50"
               >ACL</a>
             </li>
+          <li>
+              <a
+                href="#dns"
+                class="hx-flex hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [word-break:break-word] hx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:hx-border hx-gap-2 before:hx-opacity-25 before:hx-content-['#'] hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:hx-text-gray-900 contrast-more:dark:hx-text-gray-50 contrast-more:hx-border-transparent contrast-more:hover:hx-border-gray-900 contrast-more:dark:hover:hx-border-gray-50"
+              >DNS</a>
+            </li>
           </ul>
   
               
@@ -396,6 +402,30 @@ V Packet Traceru musíme u každého PC povolit DHCP kliknutím na tlačítko DH
       </li>
       <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
         <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#seznam-port%c5%af-pro-jednotliv%c3%a9-slu%c5%beby">Seznam portů pro jednotlivé služby
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="hx-font-semibold hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#dns">DNS
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#1-vytvo%c5%99en%c3%ad-z%c3%b3ny">1. Vytvoření zóny
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#2-soubor-s-dns-z%c3%a1znamy">2. Soubor s DNS záznamy
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#3-soubor-s-dns-z%c3%a1znamy---pro-v%c5%a1echny-pc">3. Soubor s DNS záznamy - pro všechny pc
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#4-soubor-s-reverzn%c3%admi-dns-z%c3%a1znamy">4. Soubor s reverzními DNS záznamy
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#5-konfigurace-rekurze-dns--forwarders">5. Konfigurace rekurze DNS &#43; forwarders
         </a>
       </li></ul>
       <div class="hx-mt-8 hx-border-t hx-bg-white hx-pt-8 hx-shadow-[0_-12px_16px_white] dark:hx-bg-dark dark:hx-shadow-[0_-12px_16px_#111] hx-sticky hx-bottom-0 hx-flex hx-flex-col hx-items-start hx-gap-2 hx-pb-8 dark:hx-border-neutral-800 contrast-more:hx-border-t contrast-more:hx-border-neutral-400 contrast-more:hx-shadow-none contrast-more:dark:hx-border-neutral-400">
@@ -531,6 +561,7 @@ Router# show ip dhcp pool</code></pre><div class="hextra-code-copy-btn-container
 <li>Když povolujeme cokoliv s TCP, musíme na zpětný směr dát <code>established</code>. Tím povolíme jen komunikaci, která byla zahájena z naší vnitřní sítě. Je to kvůli tomu jak TCP navazuje spojení - three-way-handshake</li>
 <li>Pro <strong>ping</strong> použijeme <code>echo</code> a <code>echo-reply</code> (odpověď z pingu)</li>
 <li>U <strong>SMTP pozor</strong> - může se chovat jako server i jako klient</li>
+<li><strong>Anti-spoofing filtr</strong> - zablokování paketů s falešnou zdrojovou IP adresou do naší sítě. Např. z adres 192.168.0.0/24, nebo 127.0.0.0/8</li>
 </ul>
 <h3>1. Vytvoření access listu<span class="hx-absolute -hx-mt-20" id="1-vytvoření-access-listu"></span>
     <a href="#1-vytvo%c5%99en%c3%ad-access-listu" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><ul>
@@ -690,6 +721,163 @@ Router(config)# access-list 108 permit tcp any eq 25 host 100.10.20.45 establish
 <li>143 - IMAP</li>
 <li>Další - FTP (20, 21), HTTPS (443), DHCP (67, 68), DNS (53)</li>
 </ul>
+<h2>DNS<span class="hx-absolute -hx-mt-20" id="dns"></span>
+    <a href="#dns" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><ul>
+<li>Informace níže jsou pravděpodobně zcela špatně</li>
+</ul>
+<h3>1. Vytvoření zóny<span class="hx-absolute -hx-mt-20" id="1-vytvoření-zóny"></span>
+    <a href="#1-vytvo%c5%99en%c3%ad-z%c3%b3ny" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><ul>
+<li>V souboru <code>conf.local</code> přidám novou zónu pro moji doménu</li>
+</ul>
+<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+  
+
+<div class="filename" dir="auto">conf.local</div><pre><code>zone &#34;amioza.cz&#34; {
+    type master;
+    file &#34;/etc/bind/db.amioza&#34;; // Cesta k souboru záznamů
+};</code></pre><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-8">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+
+  
+</div>
+<h3>2. Soubor s DNS záznamy<span class="hx-absolute -hx-mt-20" id="2-soubor-s-dns-záznamy"></span>
+    <a href="#2-soubor-s-dns-z%c3%a1znamy" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><ul>
+<li>Vytvořím nový soubor s názvem db.&lt;jmeno_firmy&gt;</li>
+</ul>
+<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+  
+
+<div class="filename" dir="auto">db.amioza</div><pre><code>$ORIGIN amioza.cz.
+
+$TTL 0
+
+@       IN SOA  b.ns.amioza.cz. admin.amioza.cz. (
+                20241210  // Seriové číslo (rok/měsíc/den &#43; verze)
+                5m        // Refresh (sekundy)
+                10m       // Retry (sekundy)
+                10m       // Expire (sekundy)
+                0         // Minimum TTL (sekundy)
+)
+@        NS   b.ns.amioza.cz.
+
+b.ns   A    192.0.2.10  // IP adresa mého PC - pomocí ifconfig eth0</code></pre><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-8">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+
+  
+</div>
+<h3>3. Soubor s DNS záznamy - pro všechny pc<span class="hx-absolute -hx-mt-20" id="3-soubor-s-dns-záznamy---pro-všechny-pc"></span>
+    <a href="#3-soubor-s-dns-z%c3%a1znamy---pro-v%c5%a1echny-pc" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><ul>
+<li>Do stejného souboru jako v minulém bodu přidám záznam pro každý PC</li>
+<li>IP adresy dle zadání</li>
+</ul>
+<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+  
+
+<div class="filename" dir="auto">db.amioza</div><pre><code>pc-1   A  10.0.0.2
+     TXT &#34;PC 1&#34;
+
+pc-2   A  10.0.0.3
+     TXT &#34;PC 2&#34;</code></pre><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-8">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+
+  
+</div>
+<h3>4. Soubor s reverzními DNS záznamy<span class="hx-absolute -hx-mt-20" id="4-soubor-s-reverzními-dns-záznamy"></span>
+    <a href="#4-soubor-s-reverzn%c3%admi-dns-z%c3%a1znamy" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><ul>
+<li>V souboru <code>conf.local</code> přidám novou zónu pro reverzní záznamy</li>
+</ul>
+<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+  
+
+<div class="filename" dir="auto">conf.local</div><pre><code>zone &#34;214.167.90.in-addr.arpa&#34; { // obrácená adresa sítě bez posledního oktetu
+    type master;
+    file &#34;/etc/bind/db.214.167.90.in-addr.arpa&#34;;
+}</code></pre><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-8">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+
+  
+</div>
+<ul>
+<li>Vytvořím nový soubor <code>db.214.167.90.in-addr.arpa</code></li>
+</ul>
+<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+  
+
+<div class="filename" dir="auto">db.214.167.90.in-addr.arpa</div><pre><code>$ORIGIN 214.167.90.in-addr.arpa.
+$TTL 0
+
+214.167.90.in-addr.arpa.       IN SOA  b.ns.amioza.cz. root.b.ns.amioza.cz. (
+                20241210  ; Seriové číslo (rok/měsíc/den &#43; verze)
+                5m        ; Refresh (sekundy)
+                10m         ; Retry (sekundy)
+                10m       ; Expire (sekundy)
+                0        ; Minimum TTL (sekundy)
+)
+    NS   b.ns.amioza.cz.
+
+b.ns   A    192.0.2.10  ; IP adresa mého PC - pomocí ifconfig eth0</code></pre><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-8">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+
+  
+</div>
+<h3>5. Konfigurace rekurze DNS + forwarders<span class="hx-absolute -hx-mt-20" id="5-konfigurace-rekurze-dns--forwarders"></span>
+    <a href="#5-konfigurace-rekurze-dns--forwarders" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><ul>
+<li>Přidám do hlavního <code>conf.options</code> souboru</li>
+</ul>
+<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+  
+
+<div class="filename" dir="auto">conf.local</div><pre><code>recursion: yes;
+forwarders {
+ 8.8.8.8; // nadřazený DNS server, idk
+};
+dnssec-validation no; // vypnutí dnssec, idk</code></pre><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-8">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+
+  
+</div>
 
         </div>
         <div class="hx-mt-16"></div>
